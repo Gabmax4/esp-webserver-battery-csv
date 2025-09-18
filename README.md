@@ -3,7 +3,7 @@
 An ESP8266/ESP32 project that exposes battery telemetry via an on-device **web server**, renders a **real-time chart** in the browser (AJAX), and lets you **export CSV** for analysis.  
 The repo also contains the **hardware for a 25-slot charging dock** with per-slot **CHARGE/FULL** LEDs.
 
-> The frontend lives in **`data/index.html`** (SPIFFS/LittleFS). When the ESP web server runs, the page fetches `/battery` periodically and updates the chart; CSV can be downloaded from the same page or from a dedicated endpoint.
+Frontend lives in **`data/index.html`** (SPIFFS/LittleFS). The page polls `/battery` periodically and updates the chart; CSV can be downloaded from the same page or from a dedicated endpoint.
 
 ---
 
@@ -17,10 +17,10 @@ The repo also contains the **hardware for a 25-slot charging dock** with per-slo
 
 ```mermaid
 flowchart LR
-  S[Battery / Divider -> ADC] --> M[ESP8266/ESP32 WebServer]
-  M -->|HTTP JSON+CSV| U[Dashboard (data/index.html)]
-  U -->|AJAX 1s| M
-  M -.-> L[LED endpoints (optional)]
+  S[Battery/Divider -> ADC] --> M[ESP8266/ESP32 WebServer]
+  M --> UI[Dashboard]
+  UI --> M
+  M -.-> L[LED endpoints optional]
 ```
 
 ---
@@ -43,7 +43,7 @@ flowchart LR
 | GET    | `/ledverde?...`, `/ledamarillo?...`, `/ledrojo?...`, `/ledblanco?...` | `text/plain` | Optional RGB controls. |
 | GET    | `/ledfiesta?intensidadfiesta=…&delayfiesta=…` | `text/plain` | Optional “party” mode. |
 
-> The HTML polls `/battery` every ~1s and updates the chart.
+The HTML polls `/battery` every ~1s and updates the chart.
 
 ---
 
@@ -53,7 +53,7 @@ flowchart LR
 /data                                  # SPIFFS/LittleFS content served by the ESP
   index.html
 /Simulacion 3D                         # Schematics, PCBs, 3D previews
-/Graficas bateria/Analisis de las graficas
+/Graficas bateria/Analis de las graficas
 /Datasheets
 /Documentos y proveedores
 /Logos
@@ -63,6 +63,8 @@ Lectura_Bateria.ino                    # ADC helpers (voltage/percentage)
 LICENSE                                # MIT
 README.md
 ```
+
+> Note the folder name for charts is **Analis de las graficas** (without the second “i”). Paths below use that exact spelling and URL-encoding for spaces.
 
 ---
 
@@ -95,7 +97,7 @@ A multi‑slot charger that can **charge up to 25 bracelets simultaneously**, ea
 - **CHARGE** (charging in progress)  
 - **FULL** (fully charged)
 
-From the schematic notations, the design matches a **single‑cell Li‑ion charger of the TP4056 class** (CC/CV) with a **DW01A‑class protection IC** and a **dual MOSFET pack** (e.g., FS8205A). These parts are commonly paired; if your exact IC markings differ, replace the names here with the precise part numbers from your PCB.
+From the schematic notations, the design matches a **single‑cell Li-ion charger of the TP4056 class** (CC/CV) with a **DW01A‑class protection IC** and a **dual MOSFET pack** (e.g., FS8205A). These parts are commonly paired; if your exact IC markings differ, replace the names here with the precise part numbers from your PCB.
 
 **Images**
 
@@ -112,12 +114,12 @@ From the schematic notations, the design matches a **single‑cell Li‑ion char
 
 Live chart examples captured during testing:
 
-![Battery live chart](Graficas%20bateria/Analisis%20de%20las%20graficas/bateria.PNG)
-![Annotated run](Graficas%20bateria/Analisis%20de%20las%20graficas/Grafica%20de%20comparacion.jpg)
+![Battery live chart](Graficas%20bateria/Analis%20de%20las%20graficas/bateria.PNG)
+![Annotated run](Graficas%20bateria/Analis%20de%20las%20graficas/Grafica%20de%20comparacion.jpg)
 
 Related notes & PDF:
-- Notes: `Graficas bateria/Analisis de las graficas/Notas primera lectura sin grafica.txt`  
-- PDF: `Graficas bateria/Analisis de las graficas/lectura-bateria.pdf`
+- Notes: `Graficas bateria/Analis de las graficas/Notas primera lectura sin grafica.txt`  
+- PDF: `Graficas bateria/Analis de las graficas/lectura-bateria.pdf`
 
 **Suggested metrics to report (fill in during a run)**
 - Update latency (UI round-trip): `__ ms`  
