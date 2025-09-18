@@ -1,0 +1,348 @@
+<!DOCTYPE HTML><html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css">
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/modules/exporting.js"></script>
+  <script src="https://code.highcharts.com/modules/export-data.js"></script>
+  <script src="https://code.highcharts.com/modules/boost.js"></script>
+  <script src="https://code.highcharts.com/modules/accessibility.js"></script>
+  <style>
+    body {
+
+      margin: 0 auto;
+    }
+    h2 {
+      font-family: Arial;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8">
+          <h2>Lectura en tiempo real de la bateria</h2>
+          <div class="card sombras-card">
+            <div class="card-body">
+              <div id="chart-battery" class="container"></div>
+            </div>
+          </div>
+
+
+        </div>
+        <div class="col-md-4">
+          <h2>Acciones</h2>
+          <div>
+            <form action="" method="post">
+
+              <div class="card sombras-card">
+                <div class="card-body">
+                  <h5 class="card-title">Encender leds</h5>
+                  <ul class="list-group">
+
+                    <li class="list-group-item">
+                        <a onclick="verde()" class="btn btn-success btn-sm col-4">Led Verde: <span id="valueVerde"></span></a>
+                        <input type="range" class="custom-range" min="1" max="255" id="rangoVerde">
+                    </li>
+
+                    <li class="list-group-item">
+                        <a onclick="amarillo()" class="btn btn-warning btn-sm  col-4">Led Amarillo: <span id="valueAmarillo"></span></a>
+                        <input type="range" class="custom-range" min="1" max="255" id="rangoAmarillo">
+                    </li>
+
+                    <li class="list-group-item">
+                        <a onclick="rojo()" class="btn btn-danger btn-sm  col-4">Led Rojo: <span id="valueRojo"></span></a>
+                        <input type="range" class="custom-range" min="1" max="255" id="rangoRojo">
+                    </li>
+
+                    <li class="list-group-item">
+                      <a onclick="blanco()" class="btn btn-light btn-sm  col-4">Led Blanco: <span id="valueBlanco"></span></a>
+                      <input type="range" class="custom-range" min="1" max="255" id="rangoBlanco">
+                    </li>
+
+                    <li class="list-group-item">
+                      <a onclick="todooff()" class="btn btn-dark btn-sm col-4">Apagar todos Leds</a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+
+
+              <div class="card sombras-card my-3">
+                <div class="card-body">
+                  <h5 class="card-title">Opciones</h5>
+                    <ul class="list-group">
+                      <li class="list-group-item">
+                        <a onclick="fiesta()" class="btn btn-dark btn-sm">Led Modo fiesta: <span id="valueRangoFiesta"></span> - Cambio: <span id="valueCambioFiesta"></span></a>
+
+
+                        <div class="my-3">
+                            <label for="rangoVerde" class="text-muted">Rango de intensidad</label>
+                            <input type="range" class="custom-range" min="1" max="255" id="rangoFiesta">
+
+                            <label for="rangoVerde" class="text-muted">Rango de cambio</label>
+                            <input type="range" class="custom-range" min="0" max="10000" step="50" id="rangoCambioFiesta">
+                        </div>
+
+                      </li>
+
+                      <li class="list-group-item">
+                        <a onclick="hibernar()" class="btn btn-dark btn-sm col-4">Hibernar: <span id="valueHibernar"></span></a>
+                        <a onclick="dormir()" class="btn btn-dark btn-sm col-4">Dormír <span id="valueDormir"></span></a>
+                      <input type="text" name="TextHibernar" id="TextHibernar" class="form-control my-3" placeholder="Tiempo de hibernación...">
+                      </li>
+
+
+
+                    </ul>
+                </div>
+              </div>
+
+
+
+
+            </form>
+          </div>
+        </div>
+    </div>
+  </div>
+</body>
+<script>
+
+//SLIDER-VERDE
+var sliderV = document.getElementById("rangoVerde");
+var outputV = document.getElementById("valueVerde");
+outputV.innerHTML = sliderV.value;
+
+sliderV.oninput = function() {
+  outputV.innerHTML = this.value;
+}
+
+
+//SLIDER-AMARILLO
+var sliderA = document.getElementById("rangoAmarillo");
+var outputA = document.getElementById("valueAmarillo");
+outputA.innerHTML = sliderA.value;
+
+sliderA.oninput = function() {
+  outputA.innerHTML = this.value;
+}
+
+
+//SLIDER-ROJO
+var sliderR = document.getElementById("rangoRojo");
+var outputR = document.getElementById("valueRojo");
+outputR.innerHTML = sliderR.value;
+
+sliderR.oninput = function() {
+  outputR.innerHTML = this.value;
+}
+
+
+//SLIDER-BLANCO
+var sliderB = document.getElementById("rangoBlanco");
+var outputB = document.getElementById("valueBlanco");
+outputB.innerHTML = sliderB.value;
+
+sliderB.oninput = function() {
+  outputB.innerHTML = this.value;
+}
+
+
+//SLIDER-RANGO-FIESTA
+var sliderF = document.getElementById("rangoFiesta");
+var outputF = document.getElementById("valueRangoFiesta");
+outputF.innerHTML = sliderF.value;
+
+sliderF.oninput = function() {
+  outputF.innerHTML = this.value;
+}
+
+
+//SLIDER-CAMBIO-FIESTA
+var sliderFC = document.getElementById("rangoCambioFiesta");
+var outputFC = document.getElementById("valueCambioFiesta");
+outputFC.innerHTML = sliderFC.value;
+
+sliderFC.oninput = function() {
+  outputFC.innerHTML = this.value;
+}
+
+
+//SLIDER-HIBERNAR
+var cajaHibernar = document.getElementById("TextHibernar");
+var outputHibernar = document.getElementById("valueHibernar");
+outputHibernar.innerHTML = cajaHibernar.value;
+
+cajaHibernar.oninput = function() {
+  outputHibernar.innerHTML = this.value;
+}
+
+
+
+
+
+function verde (URL){
+    var valorRangoVerde = document.getElementById("rangoVerde").value;
+    abrir = window.open("http://192.168.100.16/ledverde?intensidadverde="+valorRangoVerde,"LED VERDE","width=500,height=10,scrollbars=NO");
+    cerrar = setTimeout(function(){abrir.window.close()}, 1000);
+
+}
+function amarillo (URL){
+    var valorRangoAmarillo = document.getElementById("rangoAmarillo").value;
+    abrir = window.open("http://192.168.100.16/ledamarillo?intensidadamarillo="+valorRangoAmarillo,"LED AMARILLO","width=500,height=30,scrollbars=NO");
+    cerrar = setTimeout(function(){abrir.window.close()}, 1000);
+}
+function rojo (URL){
+    var valorRangoRojo = document.getElementById("rangoRojo").value;
+    abrir = window.open("http://192.168.100.16/ledrojo?intensidadrojo="+valorRangoRojo,"LED ROJO","width=500,height=30,scrollbars=NO")
+    cerrar = setTimeout(function(){abrir.window.close()}, 1000);
+
+}
+function blanco (URL){
+  var valorRangoBlanco = document.getElementById("rangoBlanco").value;
+    abrir = window.open("http://192.168.100.16/ledblanco?intensidadblanco="+valorRangoBlanco,"LED BLANCO","width=500,height=30,scrollbars=NO")
+    cerrar = setTimeout(function(){abrir.window.close()}, 1000);
+
+}
+
+function fiesta (URL){
+  var valorRangoFiesta = document.getElementById("rangoFiesta").value;
+  var valorCambioFiesta = document.getElementById("rangoCambioFiesta").value;
+    abrir = window.open("http://192.168.100.16/ledfiesta?intensidadfiesta="+valorRangoFiesta+"&delayfiesta="+valorCambioFiesta,"LED FIESTA","width=500,height=30,scrollbars=NO")
+    cerrar = setTimeout(function(){abrir.window.close()}, 1000);
+}
+
+function todooff (URL){
+    abrir = window.open("http://192.168.100.16/led=todooff","LED APAGAR TODO","width=500,height=30,scrollbars=NO")
+    cerrar = setTimeout(function(){abrir.window.close()}, 1000);
+
+}
+
+function dormir (URL){
+    abrir = window.open("http://192.168.100.16/dormir","DORMIR PULSERA","width=500,height=30,scrollbars=NO")
+    cerrar = setTimeout(function(){abrir.window.close()}, 1000);
+}
+function hibernar (URL){
+  var valorTextHibernar = document.getElementById("TextHibernar").value;
+    abrir = window.open("http://192.168.100.16/hibernar?tiempo="+valorTextHibernar,"HIBERNAR PULSERA","width=500,height=30,scrollbars=NO")
+    cerrar = setTimeout(function(){abrir.window.close()}, 1000);
+
+}
+
+/*setTimeout(function(){
+    venverde.close();
+    venmarillo.close();
+    venrojo.close();
+    ventodooff.close();
+    venfiesta.close();
+    venblanco.close()
+  },3000);*/
+
+
+var chartT = new Highcharts.Chart({
+
+//Renderiza al div del html
+  chart:{
+
+    renderTo : 'chart-battery',
+    zoomType: 'x'
+  },
+
+//Titulo de la grafica
+  title: {
+    text: 'Lectura Bateria'
+  },
+
+  series: [{
+    showInLegend: false,
+    data: [],
+    lineWidth: 1,
+  }],
+
+  plotOptions: {
+    line: {
+      animation: true,
+      dataLabels: { enabled: false }
+    },
+    series: {
+      color: '#059e8a' },
+
+  },
+
+  xAxis: {
+    title: { text: 'Tiempo' }, //Titulo del eje Y
+    type: 'datetime',
+    dateTimeLabelFormats: { second: '%H:%M:%S' }
+  },
+
+  yAxis: {
+    title: { text: 'Bateria' } //Titulo del eje Y
+  },
+
+  credits: { enabled: false }
+});
+
+
+setInterval(function ( ) {
+
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+
+        var y = parseFloat(this.responseText),
+            x = (new Date()).getTime();
+
+        chartT.series[0].addPoint([x, y],true, false, true);
+
+    }
+
+  };
+  xhttp.open("GET", "/battery", true); //GET-BATTERY
+  xhttp.send();
+}, 1000 );
+
+document.getElementById('preview').innerHTML = chart.getCSV();
+
+
+$(document).ready(function() {
+
+const $valueSpan = $('.valueSpan2');
+const $value = $('#customRange11');
+$valueSpan.html($value.val());
+$value.on('input change', () => {
+
+  $valueSpan.html($value.val());
+});
+});
+</script>
+
+<style>
+  .verde{
+    text-decoration: none;
+    color: white;
+  }
+  .verde-li{
+    background-color: forestgreen;
+  }
+  .amarillo-li{
+    background-color: darkgoldenrod;
+  }
+  .rojo-li{
+    background-color: darkred;
+  }
+  .btn-fiesta{
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);
+  }
+  .sombras-card{
+    -webkit-box-shadow: 9px 10px 18px -6px rgba(0,0,0,0.75);
+    -moz-box-shadow: 9px 10px 18px -6px rgba(0,0,0,0.75);
+    box-shadow: 9px 10px 18px -6px rgba(0,0,0,0.75);
+  }
+</style>
+</html>
