@@ -1,0 +1,78 @@
+Esta prueba fue echa con los led blancos a 255
+
+Antes de conectar la bateria a la pulsera leei con el multimetro 3.70V y cunado lo conecte vi que bajo a 3.49V pero 
+todabia no mandaba señal a la computadora, al momento que empece a mandar datos volvi a hacer una medicion y vi que el voltaje
+seguia siendo 3.49V. Cuando prendi el led blanco el voltaje bajo hasta 3.28V osea que las diferencias se voltaje fue
+
+-CALCULOS DE PORCENTAJES
+
+Cuando conecte la bateria 0.21V respecto a 3.70V
+Cuando prendi el led fue de 0.42 respecto a 3.7V
+y respecto a 3.49 bajo 0.21V
+
+si tomamos en cuenta que 4.2V es el 100%
+y 0V el 0% tenemos que
+0.21V es el 5% y 0.42V 10%
+
+pero si tomamos 4.2V como el 100% 
+y 3V como el 0% nos da que 
+0.21V es el 17.5% y 0.42V 35%
+del porcentaje de la bateria
+
+pero si ponemos el valor cuando dejo de mandar datos respecto a "Notas No. 2" veremos que
+si 4.2V es el 100%
+y 2.61V es el 0% tenemos que 
+0.21V es el 13.2% y 0.42V es 26.4%
+
+
+al inicio de la prubea se tenia una memdida de 729 unidades sin prender la luz blanca 
+729 = 3.50V
+cuando se encendieron los led blancos bajo a 
+682 = 3.28V
+
+-MEDICIONES DE CADA 15MIN
+
+a continuacion las lecturas de cada 15 min
+
+3:55 = 682 = 3.28V
+4:20 = 672 = 3.23V
+4:35 = 663 = 3.19V
+4:50 = 662 = 3.18V
+5:05 = 658 = 3.16V
+5:20 = 654 = 3.14V
+
+10-9-1-4-4 diferencias entre mediciones 
+
+empezando desde las 5:25 (Que es igual a un valor entre 652 y 649 que son aproxiamdamente entre ) emezo a haber fluctuaciones entre 28 
+y  hasta 90 unidades
+
+5:35 = aproximado 630 = 3.03V
+5:50 = aproximado 618 = 2.97V
+6:05 = aproximado 601 = 2.89V
+6:20 = aproximado 596 = 2.86V
+6:35 = aproximado 592 = 2.85V
+6:50 = aproximado 596 = 2.86V
+7:05 = aproximad0 601 = 2.89V
+7:20 = aproximado 585 = 2.81V
+7:35 = aproximado 576 = 2.77V
+7:50 = aproximado 575 = 2.76V
+8:05 = aproximado 570 = 2.74V
+8:20 = aproximado 530 = 2.55V
+8:30 = aproximado 512 = 2.46V     (ultima medicion)
+
+12-17-5-4-(-4)-(-5)-16-9-1-5-40-18  Difrencia entre mediciones
+
+el valor mas bajo medido fue 498 = 2.39V a la hora de 8:15:33
+
+-CONCLUSIONES			
+
+en esta grafica como vemos la grafica no parece ser lineal como en el caso de la grafia de las "Notas No. 1" donde teniamos claro
+que proximadamente se bajaban entre 7 y 8 unidades por cada 15 minutos al ver esta grafica no parece ser linetal y esto puede ser
+devido a que la bateria ya esta cada vez mas estropeada lo cual hace que no sea algo linea, esta vez obtuvimos una medicion aun
+menor que las tomadas en las "Notas No. 2" que fue de 543 = 2.61V esta vez obtuvimos un valor de 498 = 3.39V pero cuando dio este
+valor no se apago solo fue el valor minimo leido se apago al dar la lectura de 512 = 2.46V lo cual nos dice que el margen de menor
+rango de uso esta entre 543 y 498 unidades. el proyecto duro andando desde las 03:50:23 hasta las 08:30:35 esto nos da que la pulsera
+estuvo en funcionamiento durante 6:20:58 (6h 20min y 58seg) esto con los led blancos prendidos antes de eso estuvo prendido durante 
+5min con 21seg eso nos da en total un funcionamiento de 6h 26min y 19seg. Esto es mas de lo que se anteriormente se estimo
+
+23/11/2020

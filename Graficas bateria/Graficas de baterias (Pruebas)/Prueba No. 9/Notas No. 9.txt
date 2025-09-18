@@ -1,0 +1,143 @@
+Esta prueba fue corrida con todo apagago (TODO OFF)
+
+en esta prueba se comprueba lo antes mencionado y apenas identificado en las "Notas No. 8" que es el echo que la grafica tiene dos pendientes
+y al final una bajada exponencial, es esencial saber cuanto tiempo dura la pulsera con todas las funciones apagado en este caso solo se 
+tuvo la funcion de madar datos puesto que con esto podemos identificar cuanto tiempo es el que se necesita para que se apague la pulsera
+al medir con el multimetro sin conectar la pulsera nos dio un valor de 4.09V y cuando lo conecte a la pulsera dio 3.90V o 3.89V. Cuando
+se descargo totalmente la bateria dio un voltaje de 0.60 conectado a la pulsera cuando lo desconecte me dio un voltaje de 3.04V
+
+------------------------------------------------------------DATOS DE CADA 15 MIN----------------------------------------------------------
+
+La prueba empeso a las 02:44:17 y termino a las 16:24:34
+
+A continuacion se veran los resultados del muestreo de cada 15 min y la convercion utilizando la formula de "Notas No. 6" 
+((unidades que quiero convertir a voltaje)*4.02/835)-0.0178125)
+
+Timepo	     Unidades	          Voltaje
+2:44:17		818		3.920343189V
+2:59		802		3.843313249V
+3:14		797		3.819241392V
+3:29		794		3.804798278V
+3:44		793		3.799983907V
+3:59		785		3.761468937V
+4:14		782		3.747025823V
+4:29		777		3.722953967V
+4:44		772		3.698882111V
+4:59		769		3.684438997V
+5:14		764		3.660367141V
+5:29		760		3.641109656V
+5:44		757		3.626666542V
+5:59		754		3.612223428V
+6:14		747		3.578522829V
+6:29		746		3.573708458V
+6:44		741		3.549636602V
+6:59		739		3.540007859V
+7:14		735		3.520750374V
+7:29		732		3.50630726V
+7:44		728		3.487049775V
+7:59		725		3.472606662V
+8:14		722		3.458163548V
+8:29		721		3.453349177V
+8:44		720		3.448534805V
+8:59		717		3.434091692V
+10:14		712		3.410019835V
+10:29		710		3.400391093V
+10:44		710		3.400391093V
+10:59		709		3.395576722V
+11:14		708		3.39076235V
+11:29		706		3.381133608V
+11:44		703		3.366690494V
+11:59		705		3.376319237V
+12:14		703		3.366690494V
+12:29		702		3.361876123V
+12:44		701		3.357061751V
+12:59		696		3.332989895V
+13:14		693		3.318546781V
+13:29		691		3.308918039V
+13:44		687		3.289660554V
+13:59		685		3.280031811V
+14:14		682		3.265588698V
+14:29		678		3.246331213V
+14:44		676		3.23670247V
+14:59		673		3.222259356V
+15:14		672		3.217444985V
+15:29		668		3.1981875V
+15:44		656		3.140415045V
+15:59		636		3.04412762V
+16:14		598		2.861181512V
+16:24:34 AM	536		2.562690494V
+
+
+la moda en cuestion de unidades es de 3 unidades esto es la menor moda que he obtenido en las pruebas y de voltaje fue 0.01V teniendo
+en cuenta solo las medicones de cada 15 min
+
+ahora la primera pendiente cambia en el punto 08:07:10 = 722 unidades = 3.458163548V y la moda hasta este punto es 3 unidades = 0.01V
+le primera pendiente es mas pronunciada que la segunda que es menor y esta pendiente ocurrio aproximadamente en el 41.5% de toda la prueba
+la sgunda pendiente acabo en el punto 15:21:34 = 672 = 3.217444985V en este punto la moda fue mucho menor fue de 1 unidad = 0.005V
+como se puede ver fue aproximadamente la mitad que la otra pendiente tanto en voltaje como en unidades se puede decir que aproximadamente
+fue la mitad. Despues de la seugnda pendiente hubo una bajada de tipo exponencial la cual termino hasta el final de la prueba  esta caida 
+duro un tiempo de 1h 3min.
+
+--------------------------------------------------CALCULO TEORICO DE TIEMPO QUE DURARA LA PRUBEA-----------------------------------------
+
+Se realizara el mismo procedimiento que las en "Notas 7" entonces 
+
+3.49V = 100%
+3.90V = ?
+
+nos da 11.74%
+
+3.70V = 100%
+  ?   = 11.74%
+
+nos da 0.434670V
+
+1 unidad = 0.0048V
+     ?   = 0.434970V
+
+nos da 91 unidades
+
+10 unidades = 15min
+91 unidades = ?
+
+136.5min = 8190seg = 2h 16min 30seg
+
+Ahora determinare cuanto tiempo durara respucto a el "Grafico de comparacion" como estamos en el modo todo off seria el 100% de comparacion con el 
+led amarillo que es con lo que se ha estado comprando 
+
+25979seg = 100%
+    ?    = 200% 
+
+nos da 51958seg = 14h 25min 58seg
+
+ahora hay que aumentar el 11.74%
+
+51958seg + 8190seg = 60148seg = 16h 42min 28seg
+
+como en la anterior tuvimos un margen de error del 12.91% segun las "Noras No. 6" con estos datos ahora voy a sacar el 12.91% y luego 
+lo restare para ver el valor teorisado pero en "Notas No. 7" tuvomos 10% de marguen de error entonces sera un 22.92%
+
+100%   = 60148seg
+22.92% = ?
+
+nos da 13786seg
+
+60148 - 13786seg = 418,820seg = 46362seg = 12h 52min 42seg
+
+---------------------------------------------------COMPARACION CON VALORES REALES---------------------------------------------------------
+
+el tiempo real de la prueba fue de 13h 20min 17seg (48017seg) al comparar los valores anteriores vemos que existe una diferencias de 
+28min con 25seg el cual es un valor muy cercano pero ahora vamos a ver el margen de error
+
+100% = 46362seg
+  ?  = 48017seg
+
+nos da un margen de error de 3.56% y una diferencia de 1655seg el cual es un porcentaje muy bajo de error
+
+----------------------------------------------------CONCLUSIONES----------------------------------------------------------------------
+
+para la sigueinte prueba sera necesario sumar el margen de erroe que obtuvimos esta vez y seguir realizando las pruebas de las dos
+pendeintes que se tienen en los casos de todas las graficas para ver si suceden en el mismo punto siempre como se vio la pulsera tiene
+un gran tiempo de duracion mientras este no este mandando dato aun que vi algo raro puesto que no mandaba datos tan continuamente y la 
+verdad nose por qeu sea en ciertos puntos mandaba un dato cada minuto y creo que esto fue devido a que la grafica se lleno y no puedo 
+almacenar todos los datos por que cuando yo la checaba parecia funcionar correctamente.

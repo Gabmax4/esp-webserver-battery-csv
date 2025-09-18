@@ -1,0 +1,38 @@
+Esta Prueba fue grafica echa con los led blancos a 255
+
+-Al principio de la prueba empezo a un nivel normal empezo a un nivel de 766 unidades La bateria no estaba totalmente cargad
+asi que no se puede definir este como el nivel maximo de carga
+
+-despues encendi los leds y al parecer la bateria o la pulsera tiene una ligero corto o mal funcionamiento esto lo note
+por que al mover un cable tal vez hizo corto y empezo a funcionar mal devido a esto vi como el consumo de la bateria era exesivo
+y se vio una caido muy intensa cuando prendi los led bloncos a maxima potencia 
+
+*al parecer el nivel de minimo funionamiento cuando empezo a solo prender el rojo y dejo de prenderse blanco fue a un valor cercano
+a los 610 unidades
+
+-volvi a conectar la pulsera y parecia ser que todo marchaba bien asi que volivi a encender los led blancos a maxima intensidad 
+justo a las 12:00 y me dio una lectura de 712 unidades al cabo de 15 minutos 12:15 la medicion fue 705.
+
+12:00 - 712 
+12:15 - 705
+12:30 - 697
+12:45 - 689
+13:00 - 680
+13:15 - 673
+13:30 - 665
+13:45 - 658
+14:00 - 654
+14:11 - 652
+
+7-8-8-9-7-8-7-4 *2   EStos numeros son la diferencia que hay entre cada medida como se puede obrevar los que mas se repiten 
+es el 8 y el 7 el 2 es una medida que no entro dentoro del estandar de 15 min si se divide 8 o 7 unidades por los 15 minutos
+nos da que por cada minuto que pasa se consumenen entre 0.533 y 0.466 unidades 
+
+
+entonces si 712 es la medida del 100% y 610 0% la diferencia de unidades entre los dos son 102
+si cada munito equivale a 0.533 o 0.466 y dividimos 102/0.533 o 102/0.466
+se estima que la pulsera dure  ente 3h con 12min y 3h con 38min 
+
+claro teniendo en cuenta que la grafica es lineal 
+
+prueba echa el 16/11/2020 

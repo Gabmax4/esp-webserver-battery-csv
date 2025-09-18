@@ -1,0 +1,84 @@
+Esta prueba fue corrida con el MODO FIESTA a 255 y 50 milisegundos 
+
+En esta prueba a diferencia de las anterirores vi que los valores fluctuaban mucho puesto que no pude hace un analisis de los datos tan
+exactos como la anterior por lo cual me abstendre de hacer la prueba y ya que tenga la herramienta para graficar mejor le hare un 
+analisis mas detallado al principi de la prueba isn conectar la pulsera la bateria me dio un valor al medir con el multimetro de 4.09V
+y al conectarlo bajo a 3.94V y aqui fue cando ocurrio lo extraño puesto los valores empresaron fluctuar entre 3.91 y 3.88V, cuando volvi a
+ver el proyecto ya se encontraba todo apagado y no logre ver ningun bajon de intensidad puesto que no lo estaba checando y cuando medi
+con el multimetro em dio 0.60V y cuando desconecte la pulsera me dio 2.98V. como no tengo los otros datos solo realizare los calculos de la 
+aproximacion de tiempo teorico y real, pero hay que tener en cuenta que no tomare este valor muy enserio puesto que no es una relacion
+totalmente lineal y puede fluctuar demasiado 
+
+--------------------------------------------------CALCULO TEORICO DE TIEMPO QUE DURARA LA PRUBEA-----------------------------------------
+
+Se realizara el mismo procedimiento que las en "Notas 7" entonces teniendo en cuenta que 
+
+3.49V = 100%
+3.94V = ?
+
+nos da 12.89%
+
+3.70V = 100%
+  ?   = 12.89%
+
+nos da 0.47693V
+
+que 1 unidad = 0.0048V
+	 ?   = 0.47693V
+
+nose da 99 unidades
+
+10 unidades = 15min
+99 unidades = ?
+
+nos da 148.5min = 2h 28min 30seg
+
+Ahora determinare cuanto tiempo durara respucto a el "Grafico de comparacion" a simple vista puedo notar que es un 60% aproximadamente
+en comparacion a el led amarillo (duro 7h 12min y 58seg) entonces si es asi devemos de sumarle el 30% a lo que duro el led amarillo para ver cuanto duraria
+teoricamente
+
+25979seg = 100%
+    ?    = 130% 
+
+nos da 337723seg = 9h 22min 53seg
+
+ahora hay que aumentar el 12.89% 
+
+337723 + 8910 = 42683 seg = 11h 51min 23seg
+
+como en la anterior tuvimos un margen de error del 12.91% segun las "Noras No. 6" con estos datos ahora voy a sacar el 12.91% y luego 
+lo restare para ver el valor teorisado pero en "Notas No. 7" tuvomos 10% de marguen de error entonces sera un 22.92%
+
+100%   = 42683seg
+22.92% = ?
+
+nos da 9783seg 
+
+42683seg - 9783seg = 32900seg = 9h 8min 20seg
+
+
+---------------------------------------------------COMPARACION CON VALORES REALES---------------------------------------------------------
+
+el proyecto empezo a corer a las 11:12:46 y empezo con el modo fieta a las 11:15 eso son da una diferencia de 2min con 14seg, depues de eso
+el timepo en el cual termino fue a las 20:42:34 esto nos da un tiempo de duracion del MODO FIESTA de 9h 27min 51seg ahora sacaremos el 
+margen de error
+
+entonces si el 
+
+100% = 32900seg
+  ?  = 34071seg
+
+nos da un error del -3.5% osea que nos pasamos no como en los anteriores casos que nos faltaba, en esta ocacion solo nos equivocamos
+por 1171seg o 19min y 31seg. 
+
+-------------------------------------------------------CONCLUSIONES-----------------------------------------------------------------------
+
+En esta prueba nos equivocamos por muy poco tiempo esto quiere decir que cada vez se esta afinaando el metodo y un error del 5% es tolerable
+entonces pero no podemos poder esto como algo fiable puesto que este valor no es confiable por las fluctuaciones pero al menos es un buen
+indicio que las cosas estan marchando correctamente. algo que tambien puedo notar es que a medida que pasa mas tiempo se produce mas ruido
+en la señal puesto que es una señal que varia mucho y no tiene un falor fijo puesto que depende de la funcion random para que seleccione su
+color. En esta prueba tambien hice lo de la ragla y tone que el valor donde empieza a desender de manera exponencial y que la grafica deja
+de ser lineal es alrededor de los valores 660 al 650 unidades y tambien he notado o quiero especular que en muchas graficas se encuentra
+una doble pendiente puesto cuando pongo la regla es diferente el la recta desde el primer punto de la prueba a aproximadamente la mitan
+esta punto donde comeinza la otra pendiente es aproximado a el valor 730 es necesario checar las otrasgraficas y hacer un analisis para 
+constatar que esto ocurre en todas las pruebas.

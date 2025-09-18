@@ -1,0 +1,182 @@
+Esta prueba fue corrida con el led verde a 255 
+
+A diferencia de otras pruebas en esta realice mediciones de volaje cad 15min para poder checar si mis reglas de 3 y mis calculos son
+correctos. Este fue el primer caso que tue que el cargador me cargo totalmente mi bateria pero al parecer no me lo cargo totalmente
+puesto que el voltaje no llego a los esperados 4.2V si no que cuando lo medi sin conectarlo a la pulsera me dio un valor de 
+4.01V y cuando lo conecte a la pulsera bajo a un valor de 3.87V esto causo una caida de voltaje de 0.14V, tambien realice la lectura 
+cuando estba mandando datos y fue exactamente igual que cuando se conecto la bateria a la pulsera 3.87V a continuacion analizare 
+las caidas de voltaje de las anteriores pruebas para ver si existe alguna realcion y siempre es la misma.
+
+"Notas No. 2"
+3.60V a 3.10V difrencia = 0.50V
+
+"Notas No. 3"
+3.72V a 3.49V difrencia = 0.23V
+
+"Notas No. 4"
+3.70V a 3.49 difrencia = 0.21
+
+"Notas No. 5" 
+3.97V a 3.64V difrencia = 0.33
+
+"Notas No. 6" (son estas)
+4.01V a 3.87V difrencia = 0.14
+
+todas los resultados anteriores fueron sin prender ningun led solo conectando la pulsera, creo que esto debe a que la bateria tiene una 
+resistencia interna por lo cual el voltaje se ve implicado y es un poco diferente a medida que el voltaje de la fuente es diferente
+puesto que esta resstencia interna tiene que mandar mas corriente o voltaje pero como vemos en el caso de Notas No.2 y No.3 el valor es 
+muy parecido solo vayo por 0.02V, esto me hace que mi hipotesis que esto es por una resistencia interna sea la mas cercana a este caso
+puesto que a medida que es un valor mas grande el voltaje que se quita de la fuente (bateria) es menor y a medida que es mas bajo este 
+valor y corro la prueba veo que hay mas caida de voltaje por lo cual he llegado a la conclusion que entre mas cargada este la bateria
+mas tiempo de vida tendra puesto que habra una descarga mas progresiva ESTO ES IMPORTANTE! Tratare de hacer pruebas con siempre el 100%
+de carga segun mi cargador que al parecer ronda de los 4V hacia arriva para ver si existe alguna coinsidensia.
+
+-------------------------------------MEDICIONES HECAS CON EL MULTIMETRO-----------------------------------------------------------------
+
+A continuacion en esta prueba a diferencia de las otras realice mediciones con el multimetro aproximadamente cada 15min para de ese modo
+ver si nuestros calculos de lo que equivale las unidades de la bateria estan bien con el valor de voltaje que creemos que nos da y si hay
+un error tratar de corregir las medidas para ajustarlo y tener mas presision. A continuacion muestro mis mediciones echas con el multimetro
+y cuando me marco la grafica cuando la volvi a revisar en el punto que segun yo hice la medicion por que claro puede tener margen de error
+
+3.77V = 787 unidades = 11:15
+3.73V = 778 unidades = 11:30
+3.70V = 773 unidades = 11:45
+3.67V = 768 unidades = 12:00
+3.65V = 762 unidades = 12:15
+3.63V = entre 759 y 758 = 12:30
+3.61V = 754 unidades = 12:45
+3.19V = 665 unidades = 19:39
+2.41V = entre 506 y 501 = 20:23 (Bajon de intensidad de los leds evidente)
+
+extra:  Justo cuando dejo de mandar datos vi como los led imediatamente se apagaron no se quedaron ensendidos como en otros casos 
+y cuando trate de hacer una lectura de la vateria me marco 0V con el multimetro creo que esto es debido al circuito de proteccion
+que contienen la baterias de polimero de litio entonces la carge solo 2segundos para que volviera a la vida y hice la medicion y me dio
+un valor de 2.91V 
+
+-------------------------------MEDICIONES SIN EL MULTIMETRO ----------------------------------------------------------------------------
+
+Las sigueintes mediciones fueran las que nos dio la gracias cada 15min y en estos resultados utilizare la formula o la regla de tres 
+que estaba utlizando para saber el valor de voltaje respecto de cada una de las unidades y de eso modo sabre si mi calculo esta bien
+hecho en caso que no lo esto tratare de perfeccionarlo, normalmente utlizo la sigueinte igualdad 835 = 4.02V y hago la regla de tres. 
+
+8-9-5-5-6
+
+11:00 = 795 = 3.82V  
+11:15 = 787 = 3.78V 
+11:30 = 778 = 3.74V
+11:45 = 773 = 3.72V  -
+12:00 = 768 = 3.69V
+12:15 = 762 = 3.66V
+12:30 = 758 = 3.64V
+12:45 = 754 = 3.63V
+13:00 = 748 = 3.60V
+13:15 = 744 = 3.58V
+13:30 = 739 = 3.55V
+13:45 = 734 = 3.53V
+14:00 = 729 = 3.50V
+14:15 = 726 = 3.49V
+14:30 = 722 = 3.47V
+14:45 = 720 = 3.46V
+15:00 = 717 = 3.45V
+15:15 = 716 = 3.44V
+15:30 = 714 = 3.43V
+15:45 = 712 = 3.42V
+16:00 = 710 = 3.41V
+16:15 = 709 = 3.41V
+16:30 = 708 = 3.40V
+16:45 = 706 = 3.39V
+17:00 = 703 = 3.38V
+17:15 = 702 = 3.37V
+17:30 = 699 = 3.36V
+17:45 = 694 = 3.34V
+18:00 = 692 = 3.33V
+18:15 = 689 = 3.31V
+18:30 = 685 = 3.29V
+18:45 = 680 = 3.27V
+19:00 = 675 = 3.24V
+19:15 = 673 = 3.24V
+19:30 = 664 = 3.19V
+19:45 = 660 = 3.17V
+20:00 = 636 = 3.06V
+20:15 = 589 = 2.83V
+20:23 = 499 = 2.40V ULTIMO VALOR MEDIDO
+
+ahora se comprararan las dos mediciones 
+     Mediciones hechas con el multimetro         Mediciones calculadas      DIFERENCIA DE VOLTAJE
+	3.77V = 787 unidades = 11:15 ------------ 11:15 = 787 = 3.7889V 		0.0189+
+	3.73V = 778 unidades = 11:30 ------------ 11:30 = 778 = 3.7455V			0.0155+
+	3.70V = 773 unidades = 11:45 ------------ 11:45 = 773 = 3.7215V			0.0215+
+	3.67V = 768 unidades = 12:00 ------------ 12:00 = 768 = 3.6974V			0.0174+
+	3.65V = 762 unidades = 12:15 ------------ 12:15 = 762 = 3.6685V			0.0185+
+	3.63V = entre 759 y 758 = 12:30 --------- 12:30 = 758 = 3.6492V			0.0192+
+	3.61V = 754 unidades = 12:45 ------------ 12:45 = 754 = 3.6300V			0.0200+
+	3.19V = 665 unidades = 19:39 ------------ 19:39 = 665 = 3.2015V 		0.0115+
+											0.0178125 Promedio
+
+le saque la diverencia de cada uno para ver el margen de erro y como vi que 0.01 se repetia mucho tome mas decimales de los calculos
+y lo promedie para poder sacar un valor un poco mas estable ahor hare los nuevos valores de voltaje utilizando la siguiente formula
+
+
+((unidades que quiero convertir a voltaje)*4.02/835)-0.0178125
+3.77109768       
+3.727768338
+3.703696482
+3.679624626
+3.650738398
+3.631480913
+3.612223428
+3.183744386
+
+con esta nueva formula se afinaron un poco mas los datos a los valores reales puesto que no cuento con un multimetro 
+capas de leer muchos decimales se me es practicamente imporible poder tener mediciones mas finas puesto que no cuento con el equipo
+necesario 
+
+---------------------------CALCULOS DE CUANTO SE SUPONIDA QUE DURARIA ESTA PRUEBA CON EL VERDE-----------------------------------------
+
+ahora lo que queremos hacer es determinar un valor teorico de cuanto se supondria que duraria la pulsera en funcionamiento como vimos en 
+"Notas No. 5" el valor que dio la pila al medirla con el multimetro cuando se conecto fue de 3.64V y el de esta prueba fue de 3.87V
+entonces supongamos que 3.64V es el 100% y determinemos el valor de 3.87V
+
+3.64V = 100%
+3.87V = ?
+
+(3.87V*100%)/3.64V= 106.31% - 100% = 6.31% 
+
+convertimos 6.31% a voltaje que es 0.23V
+
+ahora lo convertimos a unidades 0.23V = 47 unidades aproximadamente
+
+y unidades a tiempo utilizando los mismos calculos de las "Notas No. 5"
+nos da que es equivalente a 1h con 10min y 30seg
+------------------------------------CALCULO DE APROXIMACION DE TIEMPO ENCENDIDO DE PRUEBA NO.6-------------------------------------------
+
+ahora teniendo en cuenta que cuando se hizo la prueba con losled amarillos duro 7h 12min y 58seg esto basado en las "Notas No. 5" y que 
+segun la "Grafica de comparacion" en comparacion el led verde con el amarillo es la diferencia que tienen es de 1/3 o 33.33% convertire
+estos valores a segundos y le sumare el 33.33% y despues le sumare el 6.31% que en si es 1h 10min 30seg
+
+25979seg = 100%
+    ?    = 133.33%
+
+34638 seg = 9h 37min 18seg
+esto mas el 6.31% que sacamos por que la pila estaba de mas cargada da 
+10h 47min 30seg
+
+----------------------------------CALCULOS CON EL VALOR RELA DEL TIEMPO QUE DURO LA PRUEBA------------------------------------------------
+
+segun los calculos la prueba deberia de durar 10h 47min y 30seg pero el valor que de verdad duro fue 9h 23min y 52seg (5 min que no se 
+prendieron los leds) que se asemeja muchisimo al valor que alculamos pero sin el 6.31% ahora sacaremos el margen de error respecto el 
+margen de error fue de: 
+
+38850seg = 100%
+33832seg =  ?
+
+esto nos da un margen de error de 12.91% 
+
+---------------------------------------------Conclusiones--------------------------------------------------------------------------------
+
+Un dato que fato remarcar es la MODA de la diferencia que hay entre las unidades despues de cada 15min y es de 5 unidades por lo cual esto
+quiero decir que cada 15unidades tenemos un baja de 5 unidade a diferencia de la puega No. 5 se tuvo una MODA de 2,3 y 4 a continuacion 
+muestro la tabla de diferencias 
+8-9-5-5-6-4-4-6-4-5-5-5-3-4-2-3-1-2-2-2-1-1-2-3-1-3-5-2-3-4-5-5-2-9-4-24-47 existe 6(4), 8(5), 5(3), 7(2) y 4(1) se puede ver que los
+valores mantienen una baja de entre 2 y 5 unidades que al parecer corresponde con que el valor del verde sea el 33.33% del amarillo
+

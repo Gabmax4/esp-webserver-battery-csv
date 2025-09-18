@@ -1,0 +1,131 @@
+Esta prrueba fue corrida con el led amarillo a 255 
+
+En "Notas No. 4" se dice que el voltaje leido sin que se conectara la bateria a la pulsera fue de 3.70V y cuando se conecto bajo a 
+3.49V. En esta caso la batieria sin conectar a la pulsera dio 3.97V y conectado a la pulsera dio 3.64 tambien cuando estaba mandando
+datos dio una medicion de 3.64V. a diferencias que lo que se mostro en las "Notas No. 4" se vio que el bajon de voltaje cuando se conecto
+fue de 0.21V y en este caso fue de 0.33V osea que en este caso todavia bajo mucho mas que la ultima vez que se conecto la pulsera 
+
+---------------------------CALCULOS DE CUANTO SE SUPONIDA QUE DURARIA ESTA PRUEBA CON EL AMARILLO-----------------------------------------
+
+coomo se puede ver en la prueba pasada la bateria estaba mas cargada que esta vez a conitinuacion se muestran los calculos para saber que
+tanto estaba cargada de mas respecto a la medicion anterior.
+
+supongamos que 3.7V es el 100% para que el sobrante de 100% sea la comparativa entonces
+
+3.70V = 100%
+3.97V = ?
+
+(3.97V)(100%)/3.70V = 107.30% redondiando 100% - 107.30% = 7.30%
+
+ahora se hara lo mismo pero con los valores cuando se conecto la pulsera
+
+3.49V = 100%
+3.64V = ?
+(3.64V)(100%)/3.49V = 104.30% redondiando 100% -104.30% = 4.30%
+
+tomare como medida de cuanto estaba mas cargada respecto a la ultima prueba la de 4.30% por que esta medida fue realizada ya que se
+conecto la bateria a la pulsera asi que se me hace una medida mas real. Ahroa como vimos en la "Pueba No. 4" duro un tiempo de 
+6h 20min y 58seg para sumarle el 4.30% que nos falta tomaremos la primera parte que se ve lineal de la grafica que pueron los primeros
+30min a 15min los cuales tuvieron una caida de entre 9 y 10 unidades por lo cual:
+
+si cada 10 unidades = 15min 
+
+ahora tenemos que determinar ese 4.30% a cuanto es equivalente yasea en unidades o en voltaje
+entonces si 3.70V = 100%
+	      ?   = 4.30% 
+
+(4.30%)(3.70V)/100% = 0.1591V
+
+ahora que sabemos el voltaje equivalente a 4.30% lo convertimos en unidades si sabemos que 
+que 1 unidad = 0.0048V
+	 ?   = 0.1591
+
+(0.1591V)(1 unidades)/0.0048V = 33unidades
+y estas 33 unidades en tiempo queremos saber cuando equivale por lo cual hacemos la sigueinte regla de tres
+
+10 unidades = 15min
+33 unidades = ?
+
+(33 unidades)(15min)/10 unidades = 49min con 30seg 
+
+------------------------------------CALCULO DE APROXIMACION DE TIEMPO ENCENDIDO DE PRUEBA NO.5-------------------------------------------
+
+entonces suponiendo que la pila estuviera 4.30% mas cargada duraria  en cuestion aproximadamente 7h 10min y 28seg y al ver el "Grafico 
+prueba" vemos que el led amarillo es aproximandamente un 75% de lo equivale el led blanco entonces hay que sumar el 25% restante para
+poder hacer un aproximado de lo que durara el led amarillo y si esto es cierto podriamos llevar este calculo a las demas graficas 
+para saber un aproximado de cuanto nos dara. Entonces
+
+transformaremos todo el tiempo en segundos 
+25828 seg = 100% 
+    ?     = 25%
+(25%)(25828seg)/100% = 6457 seg
+esto es 1h 47min y 37seg claro esto es tomando en cuenta de que nuestro sistema sea lineal pero no lo es por lo cual el valor sera 
+inferior a esto pero podemos darnos una proximado con estos numero. Entonces podemos aproximar que esta prueba va a durar
+8h 58min 5seg
+
+----------------------------------------------VALORES PRACTICOS---------------------------------------------------------------------------
+
+La prueba con los leds amarillos prendidos a 255 duro 7h 12min y 58 seg y antes de prender el led amarillo dure 5min antes de prenderlo 
+eso son deje que mis calculos tuvieron maregen de error de:
+32285seg = 100%
+25978seg = ?
+
+(25978seg)(100%)/32285seg = 80%
+
+ahora hacer las mediciones que se obtivieron cada 15min en la prueba:
+
+4:00  = 710 = 3.41V
+4:15  = 705 = 3.39V  (bajada extraña)
+4:30  = 694 = 3.33V
+4:45  = 691 = 3.32V
+5:00  = 684 = 3.29V
+5:15  = 680 = 3.27V
+5:30  = 673 = 3.24V
+5:45  = 667 = 3.21V
+6:00  = 662 = 3.18V
+6:15  = 655 = 3.15V
+6:30  = 652 = 3.13V
+6:45  = 648 = 3.11V
+7:00  = 645 = 3.10V
+7:15  = 643 = 3.09V
+7:30  = 642 = 3.09V
+7:45  = 640 = 3.08V
+8:00  = 640 = 3.08V
+8:15  = 639 = 3.07V
+8:30  = 637 = 3.06V
+8:45  = 633 = 3.04V
+9:00  = 630 = 3.03V
+9:15  = 628 = 3.02V
+9:30  = 626 = 3.01V
+9:45  = 622 = 2.99V
+10:00 = 618 = 2.97V
+10:15 = 615 = 2.96V
+10:30 = 609 = 2.93V
+10:45 = 604 = 2.90V                     (desde este punto callo como tipo exponecial mente)
+11:00 = 590 = 2.84V
+11:12 = 560 = 2.69V                     (ultima medicion)
+
+5-11-3-7-4-7-6-5-7-3-4-3-2-1-2-0-1-2-4-3-2-2-4-4-3-6-5-14-30
+los valores que mas se repitieron fueron 3-4-2 aproximadamente este valor equivale a 0.01V que como vemos es el valor que mas se repite
+asiq ue podemos definir que cada 15 min se restaban 0.01V aproximadamente
+
+En otras ocaciones como en caso de la prueba 4 y 2 dieron valores de desactivacion sercanos 512 y 543 en esta ocacion fue 560 el cual a
+sido el valor mas alto de desactivacion que se a registrado 
+
+NOTA: una vez que ya no mando datos instantanea mente se prendio la luz como un tipo de naranja esto se debe a que ya no fue suficiente
+la energia para prende amarillo por cual las luces disminuieron su potencia y se vio un tipo de naranja supongo por que el led verde ya 
+no tenia suficiente ptencia y bajo su intensisdad ya que el amarillo es una combinacion del rojo y verde y normalmente el rojo es el que
+se queda prendido puesto que es el que menor cantidad de energia consume. Esto quiere decir que aun tenia mas energia que entregar pero
+por alguna razon ya no pudo entablar comunicacion y mandar datos cuando esto ocurrio rapidamente hice una medicion con el multimetro
+y medio valores entre 2.29V y 2.27V. ALGO IMPORTANTE fue que cuando desconecte la bateria volvi a medir con el multimetro y me dio 
+entre 2.94V y 2.99V en el multimetro lo que se recomienda como el minimo de la bateria.
+
+----------------------------------------------------------CONCLUSIONES--------------------------------------------------------------------
+
+Al ver la grafica parece ser lineal de menos en los primeros momentos y podemos ver como justo cuando se desnecto se vio una bajada
+muy pronunciada de voltaje por lo cual podemos definir ese punto como el limite de la grafica veremos en sigueintes pruebas si este 
+punto es igual a los que se leeran futuramente, este punto fue aproximadamente en el 600, lo que se abia definido antes es que este 
+no baje la pila del valor de 3V el cual aproximadamente equivale a 625 unidades que para que llegara a este punto en la grafica duro 
+5h con 35min lo cual se me hace mas que suficiente para las demandas del proyecto. 
+
+24/11/2020

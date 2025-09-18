@@ -1,0 +1,59 @@
+Esta prueba fue echa con los led blancos a 255
+
+Estas lecturas fueron hechas mientras pasaba algo raro con la bateria ya que el cargador el cual
+utilice prendian los dos focos envez de prender solo uno y a revisar note que se quedo en un valor
+alrededor de 3.6V lo cual vi como un problema ya que no pasaba de esa brecha pero corri la prueba con ese voltaje 
+y obtuve que cuando lo conecte bajo el voltaje de 3.6V a 3.1V y en la grafica nos daba un valor de 645 unidades 
+segun los resultados de las "Notas primera lectura sin graficar" deduje que
+
+835 = 4.02V
+875 = 4.20V
+910 = 4.38V
+666 = 3.20V   //Estimado con el cual ya no deberia de funcionar el sistema 
+
+COMPARACION DE RESULTADOS CON LOS PRIMEROS RESULTADOS LEIDO EN LAS PRUEBAS
+
+En esta ocacion obtuve estas lecturas al medir con el multimetro y ver la grafica 
+
+645 = 3.1V
+606 = 2.9V
+
+teniendo en cuenta esto confirmaremos que los calculos de "Notas primera lectura sin graficar" sean correctas solo para validar
+
+si 			835 = 4.02V
+entonces cuanto es...	645 = ?			hacemos una regla de 3 y nos da que
+
+			645 = 3.1052V		exactamente la medida que medimos con el multimetro
+
+confirmacion #2 
+
+			835 = 4.02V
+			606 = ?
+
+			606 = 2.9175V		medicion casi exacta que la que medimos que fue 2.90V
+al ver que todo esta correcto podemos confiar en las mediciones de unidades desconocidas a unidades de voltaje 
+en futuras notas
+
+MEDICIONES OBTENIDAS DE LA GRAFICA
+
+me espere unos minutos para poder prender los led a maxima potencia me espera a que fueran las 4:15 para que empezara acorde con las 
+mediciones de cada 15 min, la medicion que daba sin prender los led era 649 = 3.12V (aproximados/no medidos calculados) mediciones 
+obtenidas:
+
+4:15 = 610 = 2.93V
+4:30 = 566 = 2.72V
+
+solo duro prendido la luz blanca durante 19 min por lo cual solo tenemos una comparacion y como vemos esta diferencia es mayo 
+que la medida en "Notas No.1" la cual era alrededor de 7 o 8 unidades en este caso son 44 unidades lo cual equivale a 0.21V la
+cual es la diferencia que vemos entre  2.93V y 2.72V
+
+cada unidad de equivale a 0.0048V esa es la presision de nuestra lectura tambien o 4.8uV (micro volts)
+ 
+NOTA IMPORTANTE: como se estimo con anterioridad parace ser que la medida de 3.2v era lo menos con que podia funcionar la pulsera
+estaba erroneo puesto que hoy confirmamos que pudo funcionar con la luz blanca prendida hasta aproximadamente valores cercanos a
+550 y 555 unidades (puede ser una opcion que no halla distingido entre un 100% de intensidad pero a mi perspectiva se veia bien e
+intenso como si fuera el 100%) depues de este numero medido que en voltaje equivale entre 2.64V y 2.67V. Cuando llego a el valor de 
+543 = 2.61V dejo de mandar datos a la grafica se encendio los led rojos pero con muy baja intensidad duraron unos minutos y se apago
+al ver que no prendia hice una ultima medicion con el multimetro y logre captar 1.68V aproximadamente 
+
+estas notas y pruebas fueron echas el 17/11/2020 

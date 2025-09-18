@@ -1,0 +1,11 @@
+Esta prueba fue corrida con el MODO FIESTA a 255 y 250 milisegundos 
+
+En esta prueba se comprueba lo antes mencionado y apenas identificado en las "Notas No. 8" que es el echo que la grafica tiene dos pendientes
+y al final una bajada exponencial, es esencial saber cuanto tiempo dura la pulsera con todas las funciones apagado en este caso solo se 
+tuvo la funcion de madar datos puesto que con esto podemos identificar cuanto tiempo es el que se necesita para que se apague la pulsera.
+Tambien es necesatrio denotar que tube una pequeña desoneccion La prueba empezo a las cuando encendi el modo fiesta 00:9:49 y acabo a las
+9:32:35 duro solo 33 segundos antes e empezar la prueba ocn los leds apagados
+
+aproximadamente veo que la primer pendiente se termina en los puntos 735, 04:06:00 y noto que la segunda pendiente termina aproximadamente
+en el punto 670 donde despues de eso empieza abajar exponencialmente. esta caida duro 38min se deberia de confirmar si es que en las otras
+graficos se tiene una bajada similar 

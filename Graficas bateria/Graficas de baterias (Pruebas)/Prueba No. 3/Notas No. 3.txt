@@ -1,0 +1,6 @@
+Esta prueba fue corrida con los leds blancos a 255
+
+empezamos la prueba con un valor de 3.72V sin conectar la pulsera una vez conecte la pulsera obtuve un valor de 3.49V depues prendi los 
+leds blancos y volvi a medir y note que bajo a un valor de haste 3.26V en esta prueba al cabo de 30min se me apago la computadora y tube
+que dar esta prueba como un fracaso y volverla a intentar un punto que vi fue que cuando estaba en el valor de 3.0V o 2.99 que medi con el
+multimetro decidi desconectarlo y vi como el voltaje aumento a 3.44V 

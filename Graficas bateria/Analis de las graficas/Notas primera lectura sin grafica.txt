@@ -1,0 +1,14 @@
+Valor lectura de la batería
+
+ente 835 - 838 equivalieron a 4.02V midiendo mientras estaba en uso el chip!
+el valor que dio cuando solo medimos la batería fue de 4.13V  sin conectarle el chip 
+
+y los cálculos indican que como valor máximo se llega a una lectura de 875 que equivaliera aproximadamente 4.2V 
+pero que este voltaje nunca es alcanzado realmente 
+
+Ya hicimos pruebas y si se envía de manera correcta el valor de la batería
+
+se estima que el valor de batería descargada 3.2V equivalga a 666
+
+Con 835 equivale a 4.02V
+y se midio la lectura con 4.38V  lo cual nos dio un valor analógico de 910 y eso indica que nuestras aproximaciones son correctas

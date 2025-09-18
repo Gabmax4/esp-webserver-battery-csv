@@ -1,0 +1,117 @@
+Esta prueba fue corrida con el led rojo a 255 
+
+En este caso a diferencia de lo que me salio en las "Notas No. 6" la bateria estuvo mas cargada por lo cual creo que esta vez durara un 
+poco mas. La medicion que obtuve fue de 4.08V sin conectarlo a la pulsera una vez conectandolo tuve 3.95V y cuando empezo a mandar dato
+bajo a 3.95V. 
+
+------------------------------------------------VALORES DE CADA 15 MIN --------------------------------------------------------
+
+A continuacion se muestran los valores medidos con un lapso de 15min 
+
+Unidades      voltaje (teorico)         tiempo 
+
+806		3.862570734V		04:25
+800		3.833684506V		04:40
+794		3.804798278V		04:55
+786		3.766283308V		05:10
+783		3.751840195V		05:25
+776		3.718139596V		05:40
+770		3.689253368V		05:55
+765		3.665181512V		06:10
+759		3.636295284V		06:25
+754		3.612223428V		06:40
+748		3.583337201V		06:55
+745		3.568894087V		07:10
+739		3.540007859V		07:25
+735		3.520750374V		07:40
+730		3.496678518V		07:55
+
+En este punto se efectuo un apagon pero muy pequeño se puede ver en la grafica como un pequeño triangulo 
+este apagon sucedio de las 08:05:27 a las 08:19:59 el tiempo que durante este apagon fue de 14 min con 32seg depues duro prendido durante
+1min con 25seg y despues se volvio a apagar a las 08:20:34 y se prendio a las 08:20:53 osea que duro apagado durante 19seg y en total
+duro apagado por 15min 51seg. Es por esta razon que las siguientes mediciones se les sumeraon 15min para hacer la medidicon mas exacta
+independiendtemente del apago que ocurrio.
+
+722		3.458163548V		08:35
+722		3.458163548V		05:50
+721		3.453349177V		09:05
+718		3.438906063		09:20
+717		3.434091692V		09:35
+716		3.42927732V		09:50
+712		3.410019835V		10:05
+710		3.400391093V		10:20
+712		3.410019835V		10:35
+109		0.506953967V		10:50
+708		3.39076235V		11:05
+706		3.381133608V		11:20
+703		3.366690494V		11:35
+701		3.357061751V		11:50
+696		3.332989895V		12:05
+692		3.31373241V		12:20
+687		3.289660554V		12:35
+681		3.260774326V		12:55
+680		3.255959955V		13:05
+676		3.23670247V		13:20
+670		3.207816243V		13:55
+652		3.12115756V		13:50
+607		2.904510853V		14:05
+464		2.216055763V		14:17       (Ultima medicion)
+
+NOTA IMPORTANTE: Puse una regla en la grafica para poder ver en que momento aproximadamente dejava de ser linear la caida de la carga
+de la bateria y note que aproximadamente esta caida empezo en 674 al 660 que este valor en voltaje es igual a 3.227073728 y 3.15967253
+despues promedie las diferencias de voltaje y de unidades y me dio en promedio cada 15min baja 4 unidades o 0.02V-
+
+---------------------------CALCULOS DE CUANTO SE SUPONIDA QUE DURARIA ESTA PRUEBA CON EL ROJO-----------------------------------------
+
+A continuacion realizare los debidos calculos para saber cuanto durara la pulsera prendida teoricamente y veremos cuanto no hacercamos 
+al valor que queremos conseguir haciendo lo mismo que "Nota No. 6".
+
+3.49V = 100%
+3.95V = ?
+
+dio 8.51% 
+
+en voltaje 0.31487V
+en unidades 65 
+en tiempo 1h 37min 30seg
+
+ahora teniendo en cuenta que cuando se hizo la prueba con losled amarillos duro 7h 12min y 58seg esto basado en las "Notas No. 5" y que 
+segun la "Grafica de comparacion" en comparacion el led rojo con el amarillo es la diferencia que tienen es de 1/2 o 50% convertire
+estos valores a segundos y le sumare el 50% y despues le sumare el 8.51% que en si es 1h 37min 30seg
+
+25979seg = 100%
+    ?    = 150% 
+
+150% = 38,968.5seg = 10h 49min 28seg
+
+ahora hay que sumerle el 8.15% que daria
+12h 26min 58seg = 44,818seg
+
+como en la anterior tuvimos un margen de error del 12.91% segun las "Noras No. 6" con estos datos ahora voy a sacar el 12.91% y luego 
+lo restare para ver el valor teorisado 
+
+100% = 44,818seg
+12.91% = ?
+
+12.91% = 5,786seg
+5,786seg - 44,818seg = 39032seg = 10h 50min 32seg
+
+----------------------------------------------------COMPARACION TIEMPO TEORICO CON EL REAL----------------------------------------------
+
+el tiempo que duro la prueba fue de 10h 7min 21seg pero como hubo un apagon en un lapso de tiempo eso nos da que realmente fue de
+9h 51min 30seg eso nos da un mergen de error del 
+
+100% = 39032seg
+  ?  = 35490seg
+ 
+un hacierto del 90% el mas alto que he tenido hasta ahora 
+
+aun que si contamos el tiempo que este duro sin prender (2min 38seg) los led el valor final se tiempo fuera  9h 54min 8seg
+
+----------------------------------------------------CONCLUSIONES----------------------------------------------------------------------
+
+cada vez que avanzan mas las pruebas se afina mucho mas las aproximaciones lo cual sera cricial para determinar cuanto puede durar la 
+pulsera con los valores y las comparaciones hechas anteriormente. tambien cabe resaltar que todas las gracias parecen ser muy lineales
+hasta un cierto punto necesitare graficas en otros programas para ver cual es este punto de caida pero al no contar con eso todavia 
+lo dejare para pruebas posteriores en las pruebas del modo fiesta que sera la sigueinte pondre los valores y comparaciones de todos los
+led se necesita hacer mas analisis para los datos para ver hacer suposisiones mas exactas.
